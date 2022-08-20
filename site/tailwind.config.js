@@ -9,6 +9,9 @@ module.exports = {
       maxWidth: {
         '8xl': '1920px',
       },
+      background: {
+        yellow: 'var(--yellow)',
+      },
       colors: {
         primary: 'var(--primary)',
         'primary-2': 'var(--primary-2)',
@@ -36,6 +39,7 @@ module.exports = {
         blue: 'var(--blue)',
         green: 'var(--green)',
         red: 'var(--red)',
+        yellow: 'var(--yellow)',
       },
       textColor: {
         base: 'var(--text-base)',

@@ -41,28 +41,29 @@ export default function Home({
   return (
     <>
       <Grid variant="filled">
-        {products.slice(0, 3).map((product: any, i: number) => (
+        {products.slice(0, 5).map((product: any, i: number) => (
           <ProductCard
             key={product.id}
             product={product}
             imgProps={{
-              width: i === 0 ? 1080 : 540,
-              height: i === 0 ? 1080 : 540,
+              width: 500,
+              height: 500,
               priority: true,
+              objectFit: 'contain',
             }}
           />
         ))}
       </Grid>
-      <Marquee variant="secondary">
+      {/* <Marquee variant="secondary">
         {products.slice(0, 3).map((product: any, i: number) => (
           <ProductCard key={product.id} product={product} variant="slim" />
         ))}
-      </Marquee>
+      </Marquee> */}
       <Hero
-        headline=" Dessert dragée halvah croissant."
-        description="Cupcake ipsum dolor sit amet lemon drops pastry cotton candy. Sweet carrot cake macaroon bonbon croissant fruitcake jujubes macaroon oat cake. Soufflé bonbon caramels jelly beans. Tiramisu sweet roll cheesecake pie carrot cake. "
+        headline="DẤU ẤN TINH THẦN VIỆT"
+        description="Đúng với tên gọi, Trúc Vàng lựa chọn hình ảnh cây trúc vươn mình thẳng tắp trên nền vàng rực rỡ, biểu trưng cho tinh thần uy tín, nhiệt huyết, sáng tạo của đội ngũ nhân viên trẻ đầy nhiệt huyết."
       />
-      <Grid layout="B" variant="filled">
+      {/* <Grid layout="B" variant="filled">
         {products.slice(0, 3).map((product: any, i: number) => (
           <ProductCard
             key={product.id}
@@ -73,7 +74,7 @@ export default function Home({
             }}
           />
         ))}
-      </Grid>
+      </Grid> */}
       <Marquee>
         {products.slice(3).map((product: any, i: number) => (
           <ProductCard key={product.id} product={product} variant="slim" />

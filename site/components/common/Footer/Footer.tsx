@@ -17,7 +17,15 @@ interface Props {
 
 const links = [
   {
-    name: 'Home',
+    name: 'Trang chủ',
+    url: '/',
+  },
+  {
+    name: 'Sản phẩm sơn',
+    url: '/',
+  },
+  {
+    name: 'Về chúng tôi',
     url: '/',
   },
 ]
@@ -30,13 +38,13 @@ const Footer: FC<Props> = ({ className, pages }) => {
     <footer className={rootClassName}>
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-accent-2 py-12 text-primary bg-primary transition-colors duration-150">
-          <div className="col-span-1 lg:col-span-2">
+          <div className="col-span-2 lg:col-span-2">
             <Link href="/">
-              <a className="flex flex-initial items-center font-bold md:mr-24">
+              <a className="flex flex-initial items-center font-bold md:mr-0">
                 <span className="rounded-full border border-accent-6 mr-2">
                   <Logo />
                 </span>
-                <span>ACME</span>
+                <span>Truc Vang</span>
               </a>
             </Link>
           </div>
@@ -62,28 +70,12 @@ const Footer: FC<Props> = ({ className, pages }) => {
               >
                 <Github />
               </a>
-              <I18nWidget />
             </div>
           </div>
         </div>
         <div className="pt-6 pb-10 flex flex-col md:flex-row justify-between items-center space-y-4 text-accent-6 text-sm">
           <div>
-            <span>&copy; 2020 ACME, Inc. All rights reserved.</span>
-          </div>
-          <div className="flex items-center text-primary text-sm">
-            <span className="text-primary">Created by</span>
-            <a
-              rel="noopener noreferrer"
-              href="https://vercel.com"
-              aria-label="Vercel.com Link"
-              target="_blank"
-              className="text-primary"
-            >
-              <Vercel
-                className="inline-block h-6 ml-3 text-primary"
-                alt="Vercel.com Logo"
-              />
-            </a>
+            <span>&copy; 2022 Truc Vang, Inc. All rights reserved.</span>
           </div>
         </div>
       </Container>

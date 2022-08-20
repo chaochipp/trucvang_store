@@ -17,7 +17,7 @@
 
 .layoutA {
   & > *:nth-child(6n + 1),
-  & > *:nth-child(6n + 5) {
+  & > *:nth-child(6n + 6) {
     @apply row-span-2 lg:col-span-2;
     height: var(--row-height);
   }
@@ -28,11 +28,19 @@
     }
 
     & > *:nth-child(6n + 2) {
-      @apply bg-accent-8;
+      @apply bg-cyan;
     }
 
     & > *:nth-child(6n + 3) {
       @apply bg-pink;
+    }
+
+    & > *:nth-child(6n + 4) {
+      @apply bg-blue;
+    }
+
+    & > *:nth-child(6n + 5) {
+      @apply bg-green;
     }
 
     & > *:nth-child(6n + 6) {
@@ -121,7 +129,7 @@
 
 @screen lg {
   .root {
-    @apply grid-cols-3 grid-rows-2;
+    @apply grid-cols-4 grid-rows-2;
   }
 
   .root > * {
