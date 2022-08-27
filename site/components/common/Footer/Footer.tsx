@@ -37,19 +37,37 @@ const Footer: FC<Props> = ({ className, pages }) => {
   return (
     <footer className={rootClassName}>
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-accent-2 py-12 text-primary bg-primary transition-colors duration-150">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 py-12 text-primary bg-primary transition-colors duration-150 ut">
           <div className="col-span-2 lg:col-span-2">
             <Link href="/">
-              <a className="flex flex-initial items-center font-bold md:mr-0">
-                <span className="rounded-full border border-accent-6 mr-2">
+              <a className="flex flex-initial items-center font-bold md:mr-0 lg:mr-4">
+                <span>
                   <Logo />
                 </span>
-                <span>Truc Vang</span>
               </a>
             </Link>
           </div>
-          <div className="col-span-1 lg:col-span-8">
-            <div className="grid md:grid-rows-4 md:grid-cols-3 md:grid-flow-col">
+          <div className="col-span-1 lg:col-span-5">
+            <div className="grid md:grid-cols-1">
+              <div className="mb-4 border-b pb-4">
+                CÔNG TY TNHH THƯƠNG MẠI VẬT LIỆU TRANG TRÍ
+                <br /> NỘI & NGOẠI THẤT -{' '}
+                <strong className="text-yellow">TRÚC VÀNG</strong>
+              </div>
+              <div>
+                MST: <strong>0317141680</strong>
+              </div>
+              <div>
+                Ngày cấp: <strong>27/01/2022</strong>
+              </div>
+              <div>
+                Nơi cấp:{' '}
+                <strong>Sở kế hoạch và đầu tư thành phố Hồ Chí Minh</strong>
+              </div>
+            </div>
+          </div>
+          <div className="col-span-1 lg:col-span-3">
+            <div className="grid md:grid-rows-4 md:grid-cols-2 md:grid-flow-col">
               {[...links, ...sitePages].map((page) => (
                 <span key={page.url} className="py-3 md:py-0 md:pb-4">
                   <Link href={page.url!}>
@@ -61,19 +79,8 @@ const Footer: FC<Props> = ({ className, pages }) => {
               ))}
             </div>
           </div>
-          <div className="col-span-1 lg:col-span-2 flex items-start lg:justify-end text-primary">
-            <div className="flex space-x-6 items-center h-10">
-              <a
-                className={s.link}
-                aria-label="Github Repository"
-                href="https://github.com/vercel/commerce"
-              >
-                <Github />
-              </a>
-            </div>
-          </div>
         </div>
-        <div className="pt-6 pb-10 flex flex-col md:flex-row justify-between items-center space-y-4 text-accent-6 text-sm">
+        <div className="pt-6 pb-10 flex flex-col md:flex-row justify-between items-center space-y-4 text-accent-6 text-sm border-t">
           <div>
             <span>&copy; 2022 Truc Vang, Inc. All rights reserved.</span>
           </div>

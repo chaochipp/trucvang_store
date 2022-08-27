@@ -2,8 +2,13 @@ import commerce from '@lib/api/commerce'
 import { Layout } from '@components/common'
 import { ProductCard } from '@components/product'
 import { Grid, Marquee, Hero } from '@components/ui'
-// import HomeAllProductsGrid from '@components/common/HomeAllProductsGrid'
+import HomeAllProductsGrid from '@components/common/HomeAllProductsGrid'
 import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
+import Image from 'next/image'
+import SubHero from '../public/assets/1.png'
+import LocationPin from '@components/icons/LocationPin'
+import Phone from '@components/icons/Phone'
+import Mail from '@components/icons/Mail'
 
 export async function getStaticProps({
   preview,
@@ -63,7 +68,54 @@ export default function Home({
         headline="DẤU ẤN TINH THẦN VIỆT"
         description="Đúng với tên gọi, Trúc Vàng lựa chọn hình ảnh cây trúc vươn mình thẳng tắp trên nền vàng rực rỡ, biểu trưng cho tinh thần uy tín, nhiệt huyết, sáng tạo của đội ngũ nhân viên trẻ đầy nhiệt huyết."
       />
-      {/* <Grid layout="B" variant="filled">
+      <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-0">
+        <div className="col-span-1">
+          <Image
+            src={SubHero}
+            layout="responsive"
+            width="1"
+            height="1"
+            alt="mau son"
+          />
+        </div>
+        <div className="col-span-1">
+          <div className="h-full p-14 flex justify-center flex-col max-w-xl ml-auto	mr-auto	">
+            <h3 className="text-3xl font-bold mb-6">Liên hệ</h3>
+            <div className="grid grid-cols-12 mb-3">
+              <div className="col-span-1">
+                <LocationPin />
+              </div>
+              <div className="col-span-11">
+                236/43/2 Điện Biên Phủ, Phường 17, Quận Bình Thạnh, Thành Phố Hồ
+                Chí Minh.
+              </div>
+            </div>
+
+            <div className="grid grid-cols-12 mb-3">
+              <div className="col-span-1">
+                <Phone />
+              </div>
+              <div className="col-span-11">
+                <a href="tel:02873005525" className="hover:text-yellow">
+                  028 7300 5525
+                </a>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-12 mb-3">
+              <div className="col-span-1">
+                <Mail />
+              </div>
+              <div className="col-span-11">
+                <a href="mailto:info@trucvang.vn" className="hover:text-yellow">
+                  info@trucvang.vn
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <Grid layout="A" variant="filled">
         {products.slice(0, 3).map((product: any, i: number) => (
           <ProductCard
             key={product.id}
@@ -75,15 +127,15 @@ export default function Home({
           />
         ))}
       </Grid> */}
-      <Marquee>
+      {/* <Marquee>
         {products.slice(3).map((product: any, i: number) => (
           <ProductCard key={product.id} product={product} variant="slim" />
         ))}
-      </Marquee>
+      </Marquee> */}
       {/* <HomeAllProductsGrid
-        newestProducts={products}
-        categories={categories}
-        brands={brands}
+        products={products}
+        // categories={categories}
+        // brands={brands}
       /> */}
     </>
   )

@@ -1,6 +1,6 @@
 .root {
   @apply transition-colors ease-in-out duration-500
-  absolute top-5 left-0 z-20 pr-16;
+  absolute top-0 left-0 z-20 pr-16;
 }
 
 .root .name {
@@ -12,7 +12,7 @@
 
 .root .name span {
   @apply py-4 px-4 text-primary font-bold;
-  background-color: var(--yellow);
+  background-color: var(--accent-8);
   color: var(--primary);
   min-height: 50px;
   font-size: inherit;

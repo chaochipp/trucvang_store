@@ -166,7 +166,7 @@ export default function Search({ categories, brands }: SearchPropsType) {
           </div>
 
           {/* Designs */}
-          <div className="relative inline-block w-full">
+          {/* <div className="relative inline-block w-full">
             <div className="lg:hidden mt-3">
               <span className="rounded-md shadow-sm">
                 <button
@@ -265,10 +265,10 @@ export default function Search({ categories, brands }: SearchPropsType) {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         {/* Products */}
-        <div className="col-span-8 order-3 lg:order-none">
+        <div className="col-span-10 order-3 lg:order-none">
           {(q || activeCategory || activeBrand) && (
             <div className="mb-12 transition ease-in duration-75">
               {data ? (
@@ -313,7 +313,7 @@ export default function Search({ categories, brands }: SearchPropsType) {
             </div>
           )}
           {data ? (
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-2 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {data.products.map((product: Product) => (
                 <ProductCard
                   variant="simple"
@@ -339,7 +339,7 @@ export default function Search({ categories, brands }: SearchPropsType) {
         </div>
 
         {/* Sort */}
-        <div className="col-span-8 lg:col-span-2 order-2 lg:order-none">
+        {/* <div className="col-span-8 lg:col-span-2 order-2 lg:order-none">
           <div className="relative inline-block w-full">
             <div className="lg:hidden">
               <span className="rounded-md shadow-sm">
@@ -430,7 +430,7 @@ export default function Search({ categories, brands }: SearchPropsType) {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </Container>
   )
