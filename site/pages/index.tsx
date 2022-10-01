@@ -82,20 +82,19 @@ export default function Home({
           <div className="h-full p-14 flex justify-center flex-col max-w-xl ml-auto	mr-auto	">
             <h3 className="text-3xl font-bold mb-6">Liên hệ</h3>
             <div className="grid grid-cols-12 mb-3">
-              <div className="col-span-1">
+              <div className="col-span-2">
                 <LocationPin />
               </div>
-              <div className="col-span-11">
-                236/43/2 Điện Biên Phủ, Phường 17, Quận Bình Thạnh, Thành Phố Hồ
-                Chí Minh.
+              <div className="col-span-10">
+                23 Số 20, P. Bình An, Quận 2, Thành phố Hồ Chí Minh, Vietnam
               </div>
             </div>
 
             <div className="grid grid-cols-12 mb-3">
-              <div className="col-span-1">
+              <div className="col-span-2">
                 <Phone />
               </div>
-              <div className="col-span-11">
+              <div className="col-span-10">
                 <a href="tel:02873005525" className="hover:text-yellow">
                   028 7300 5525
                 </a>
@@ -103,10 +102,10 @@ export default function Home({
             </div>
 
             <div className="grid grid-cols-12 mb-3">
-              <div className="col-span-1">
+              <div className="col-span-2">
                 <Mail />
               </div>
-              <div className="col-span-11">
+              <div className="col-span-10">
                 <a href="mailto:info@trucvang.vn" className="hover:text-yellow">
                   info@trucvang.vn
                 </a>

@@ -12,7 +12,7 @@ const Searchbar: FC<Props> = ({ className, id = 'search' }) => {
   const router = useRouter()
 
   useEffect(() => {
-    router.prefetch('/search')
+    router.prefetch('/son')
   }, [router])
 
   const handleKeyUp = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -23,7 +23,7 @@ const Searchbar: FC<Props> = ({ className, id = 'search' }) => {
 
       router.push(
         {
-          pathname: `/search`,
+          pathname: `/son`,
           query: q ? { q } : {},
         },
         undefined,

@@ -18,7 +18,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
   <NavbarRoot>
     <Container clean className="mx-auto max-w-8xl px-6">
       <div className={s.nav}>
-        <div className="flex items-center flex-1 basis-2/3">
+        <div className="flex items-center justify-center lg:justify-start flex-1 basis-2/3">
           <Link href="/">
             <a className={s.logo} aria-label="Logo">
               <Logo />
@@ -28,12 +28,12 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
             <Link href="/">
               <a className={s.link}>Trang Chủ</a>
             </Link>
-            <Link href="/search">
+            <Link href="/son">
               <a className={s.link}>Sản Phẩm Sơn</a>
             </Link>
-            <Link href="/about-us">
+            {/* <Link href="/about-us">
               <a className={s.link}>Về Chúng Tôi</a>
-            </Link>
+            </Link> */}
             {/* {links?.map((l) => (
               <Link href={l.href} key={l.href}>
                 <a className={s.link}>{l.label}</a>

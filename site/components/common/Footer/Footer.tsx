@@ -22,12 +22,12 @@ const links = [
   },
   {
     name: 'Sản phẩm sơn',
-    url: '/',
+    url: '/son',
   },
-  {
-    name: 'Về chúng tôi',
-    url: '/',
-  },
+  // {
+  //   name: 'Về chúng tôi',
+  //   url: '/about-us',
+  // },
 ]
 
 const Footer: FC<Props> = ({ className, pages }) => {
@@ -37,17 +37,17 @@ const Footer: FC<Props> = ({ className, pages }) => {
   return (
     <footer className={rootClassName}>
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 py-12 text-primary bg-primary transition-colors duration-150 ut">
-          <div className="col-span-2 lg:col-span-2">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-8 lg:gap-8 py-12 text-primary bg-primary transition-colors duration-150 ut">
+          <div className="col-span-12 lg:col-span-2">
             <Link href="/">
-              <a className="flex flex-initial items-center font-bold md:mr-0 lg:mr-4">
+              <a className="flex flex-initial items-center justify-center font-bold">
                 <span>
                   <Logo />
                 </span>
               </a>
             </Link>
           </div>
-          <div className="col-span-1 lg:col-span-5">
+          <div className="col-span-12 lg:col-span-6">
             <div className="grid md:grid-cols-1">
               <div className="mb-4 border-b pb-4">
                 CÔNG TY TNHH THƯƠNG MẠI VẬT LIỆU TRANG TRÍ
@@ -66,7 +66,7 @@ const Footer: FC<Props> = ({ className, pages }) => {
               </div>
             </div>
           </div>
-          <div className="col-span-1 lg:col-span-3">
+          <div className="hidden lg:block col-span-1 lg:col-span-4">
             <div className="grid md:grid-rows-4 md:grid-cols-2 md:grid-flow-col">
               {[...links, ...sitePages].map((page) => (
                 <span key={page.url} className="py-3 md:py-0 md:pb-4">
