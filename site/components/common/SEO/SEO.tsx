@@ -122,7 +122,7 @@ const SEO: FC<Props> = ({
       {openGraph?.images?.length
         ? openGraph.images.map((img, index) => ogImage(img, index))
         : ogImage(config.openGraph.images[0], 0)}
-      {config.twitter.cardType && (
+      {/* {config.twitter.cardType && (
         <meta
           key="twitter:card"
           name="twitter:card"
@@ -142,7 +142,7 @@ const SEO: FC<Props> = ({
           name="twitter:creator"
           content={config.twitter.handle}
         />
-      )}
+      )} */}
       <meta key="robots" name="robots" content={robots ?? 'index,follow'} />
       <meta
         key="googlebot"
