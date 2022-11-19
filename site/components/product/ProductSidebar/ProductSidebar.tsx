@@ -56,6 +56,21 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
         <Rating value={5} />
       </div>
       <div>
+        <a
+          href="https://www.facebook.com/trucvangdecoratingmaterials?mibextid=LQQJ4d"
+          target="_blank"
+          rel="nofollow noreferer"
+        >
+          <Button
+            aria-label="Liên hệ Mua"
+            type="button"
+            className={s.button}
+            loading={loading}
+            disabled={variant?.availableForSale === false}
+          >
+            {'Liên hệ Mua'}
+          </Button>
+        </a>
         {process.env.COMMERCE_CART_ENABLED && (
           <Button
             aria-label="Add to Cart"
