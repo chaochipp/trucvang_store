@@ -59,7 +59,7 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
         <a
           href="https://www.facebook.com/trucvangdecoratingmaterials?mibextid=LQQJ4d"
           target="_blank"
-          rel="nofollow noreferer"
+          rel="noreferrer"
         >
           <Button
             aria-label="Liên hệ Mua"
