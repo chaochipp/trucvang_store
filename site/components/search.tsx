@@ -65,8 +65,8 @@ export default function Search({ categories, brands }: SearchPropsType) {
 
   return (
     <Container>
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-3 mb-20">
-        <div className="col-span-8 lg:col-span-2 order-1 lg:order-none">
+      <div className="grid grid-cols-12 lg:grid-cols-12 gap-4 mt-3 mb-20">
+        <div className="col-span-12 lg:col-span-2 order-1 lg:order-none">
           {/* Categories */}
           <div className="relative inline-block w-full">
             <div className="lg:hidden">
@@ -128,37 +128,48 @@ export default function Search({ categories, brands }: SearchPropsType) {
                             'block lg:inline-block px-4 py-2 lg:p-0 lg:my-2 lg:mx-4'
                           }
                         >
-                          All Categories
+                          Sản phẩm sơn
                         </a>
                       </Link>
                     </li>
-                    {categories.map((cat: any) => (
-                      <li
-                        key={cat.path}
-                        className={cn(
-                          'block text-sm leading-5 text-accent-4 hover:bg-accent-1 lg:hover:bg-transparent hover:text-accent-8 focus:outline-none focus:bg-accent-1 focus:text-accent-8',
-                          {
-                            underline: activeCategory?.id === cat.id,
-                          }
-                        )}
-                      >
-                        <Link
-                          href={{
-                            pathname: getCategoryPath(cat.path, brand),
-                            query,
-                          }}
-                        >
-                          <a
-                            onClick={(e) => handleClick(e, 'categories')}
-                            className={
-                              'block lg:inline-block px-4 py-2 lg:p-0 lg:my-2 lg:mx-4'
-                            }
+                    {categories.map((cat: any) => {
+                      const n: string = cat.name as string
+
+                      if (
+                        n.toLowerCase().includes('sơn') &&
+                        !n.toLowerCase().includes('hiệu')
+                      ) {
+                        return (
+                          <li
+                            key={cat.path}
+                            className={cn(
+                              'block text-sm leading-5 text-accent-4 hover:bg-accent-1 lg:hover:bg-transparent hover:text-accent-8 focus:outline-none focus:bg-accent-1 focus:text-accent-8',
+                              {
+                                underline: activeCategory?.id === cat.id,
+                              }
+                            )}
                           >
-                            {cat.name}
-                          </a>
-                        </Link>
-                      </li>
-                    ))}
+                            <Link
+                              href={{
+                                pathname: getCategoryPath(cat.path, brand),
+                                query,
+                              }}
+                            >
+                              <a
+                                onClick={(e) => handleClick(e, 'categories')}
+                                className={
+                                  'block lg:inline-block px-4 py-2 lg:p-0 lg:my-2 lg:mx-4'
+                                }
+                              >
+                                {cat.name}
+                              </a>
+                            </Link>
+                          </li>
+                        )
+                      } else {
+                        return null
+                      }
+                    })}
                   </ul>
                 </div>
               </div>
@@ -268,7 +279,7 @@ export default function Search({ categories, brands }: SearchPropsType) {
           </div> */}
         </div>
         {/* Products */}
-        <div className="col-span-10 order-3 lg:order-none">
+        <div className="col-span-12 order-3 lg:order-none">
           {(q || activeCategory || activeBrand) && (
             <div className="mb-12 transition ease-in duration-75">
               {data ? (

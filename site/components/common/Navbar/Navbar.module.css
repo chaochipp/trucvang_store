@@ -8,7 +8,7 @@
 }
 
 .navMenu {
-  @apply hidden ml-6 space-x-8 lg:block;
+  @apply ml-6 space-x-8 lg:block;
 }
 
 .link {

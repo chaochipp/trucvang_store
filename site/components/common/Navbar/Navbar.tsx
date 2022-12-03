@@ -18,7 +18,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
   <NavbarRoot>
     <Container clean className="mx-auto max-w-8xl px-6">
       <div className={s.nav}>
-        <div className="flex items-center justify-center lg:justify-start flex-1 basis-2/3">
+        <div className="flex items-center lg:justify-start flex-1 basis-2/3">
           <Link href="/">
             <a className={s.logo} aria-label="Logo">
               <Logo />
@@ -31,6 +31,9 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
             <Link href="/son">
               <a className={s.link}>Sản Phẩm Sơn</a>
             </Link>
+            {/* <Link href="/son">
+              <a className={s.link}>Thương Hiệu Sơn</a>
+            </Link> */}
             {/* <Link href="/about-us">
               <a className={s.link}>Về Chúng Tôi</a>
             </Link> */}
