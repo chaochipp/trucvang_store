@@ -21,7 +21,7 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
     baseAmount: product.price.retailPrice,
     currencyCode: product.price.currencyCode!,
   })
-
+  console.log(product)
   return (
     <>
       <Container className="max-w-none w-full" clean>
@@ -29,7 +29,7 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
           <div className={cn(s.main, 'fit')}>
             <ProductTag
               name={product.name}
-              price={`${price} ${product.price?.currencyCode}`}
+              price={`${product.price.value == 0 ? '' : price}`}
               fontSize={25}
               className={s.productTag}
             />

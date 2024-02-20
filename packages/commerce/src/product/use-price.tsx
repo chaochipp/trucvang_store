@@ -14,7 +14,6 @@ export function formatPrice({
     style: 'currency',
     currency: currencyCode,
   })
-
   return formatCurrency.format(amount)
 }
 
