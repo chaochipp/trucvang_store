@@ -113,7 +113,7 @@ const ProductCard: FC<Props> = ({
             )}
             <ProductTag
               name={product.name}
-              price={`${price} ${product.price?.currencyCode}`}
+              price={`${product.price.value == 0 ? '' : price}`}
             />
             <div className={s.imageContainer}>
               {product?.images && (
