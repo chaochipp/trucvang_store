@@ -65,8 +65,8 @@ export default function Home({
         ))}
       </Marquee> */}
       <Hero
-        headline="DẤU ẤN TINH THẦN VIỆT"
-        description="Đúng với tên gọi, Trúc Vàng lựa chọn hình ảnh cây trúc vươn mình thẳng tắp trên nền vàng rực rỡ, biểu trưng cho tinh thần uy tín, nhiệt huyết, sáng tạo của đội ngũ nhân viên trẻ đầy nhiệt huyết."
+        headline="TRANG HOÀNG KHÔNG GIAN SỐNG HIỆN ĐẠI"
+        description="Trúc Vàng là đại lý chuyên phân phối sỉ và lẻ sơn nước: Mykolor Touch, Spec Hello, Expo, Jotun, Kova, Maxilite chính hãng, tư vấn màu sơn, và pha màu theo yêu cầu của Quý Khách."
       />
       <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-0">
         <div className="col-span-1">
